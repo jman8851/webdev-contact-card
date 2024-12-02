@@ -1,0 +1,115 @@
+@import url("reset.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  transition: max-width 0.3s ease;
+}
+
+.card-header {
+  background-color: rgb(20, 86, 20);
+  color: black;
+  padding: 15px;
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-image: url(/images/green.avif)
+}
+
+.profile-pic {
+  text-align: center;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;  
+  
+}
+
+.profile-pic img {
+  border: solid 5px black;
+  border-radius: 75%;
+  width: 175px;
+  height: 175px;
+  display: flex;
+
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  border: solid 5px black;
+  
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+  color: rgb(231, 240, 231);
+}
+
+.contact-details strong {
+  color: rgb(248, 13, 13);
+}
+
+@media (min-width: 500px) {
+  .card {
+      max-width: 500px;
+  }
+  .card-body {
+      flex-direction: column;
+  }
+  .profile-pic {
+      margin-bottom: 15px;
+      align-items: center;
+      flex-direction: column;
+      
+  }
+  .contact-details {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+      max-width: 768px;
+  }
+  .card-body {
+      flex-direction: row;
+  }
+  .profile-pic {
+      flex: 2;
+      margin-bottom: 35 0 35 0;
+  }
+  .contact-details {
+      flex: 2;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 20px;
+  }
+}
